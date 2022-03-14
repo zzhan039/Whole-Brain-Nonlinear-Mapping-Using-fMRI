@@ -27,7 +27,7 @@ for count0 = 1:num_sbj
             
 %% Storing the optimal embedding time delay using mutual informatin first minimum
               
-            [tmp, ~] = AMT_IF(q2,b,200);
+            [tmp, ~] = AMT_IF(q2,b,length(q2));
             [~,~,~,mutual] = extrema(tmp);
             mutual = sort(mutual);
             store = [store mutual(1)];
