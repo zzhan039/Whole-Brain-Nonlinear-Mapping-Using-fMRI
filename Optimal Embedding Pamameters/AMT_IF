@@ -1,0 +1,24 @@
+function [avg_mi corrs] = AMT_IF(xy,nBins,nLags)
+
+%% Average mutual information
+nLags = floor(nLags);
+avg_mi = zeros(nLags+1,1);
+corrs = zeros(nLags+1,1);
+for i = 1:nLags+1 
+    xlag = x(1:length(x)-i+1);
+    ylag = y(i:length(x));
+    [px xBinComputed] = prob(xlag,xBin);
+    [py yBinComputed] = prob(ylag,yBin);
+    pxy = probxy([xlag ylag], xBinComputed, yBinComputed);
+    amixy = 0;
+    for j = 1 :xBinComputed
+        for k = 1 :yBinComputed
+            if pxy(j,k)~= 0
+                amixy= amixy + pxy(j,k).*log2(pxy(j,k)./px(j)./py(k));
+            end
+        end
+    end
+    avg_mi(i) = amixy;       % Average mutual information
+    correlation =  corrcoef([xlag ylag]);  
+    corrs(i) = correlation(1,2);  % Correlation
+end
