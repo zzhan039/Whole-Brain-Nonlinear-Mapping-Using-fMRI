@@ -3,7 +3,7 @@
 function data = loadfile(dir)
 clear;
 
-%dirname = load("sub.mat"); A mat file storing the nii file of each
+%dirname = load("sub.mat"); A mat file storing the nii file of each, we have an abide1_dir_sample.mat here
 %subjects
 
 
