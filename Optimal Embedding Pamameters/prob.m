@@ -39,8 +39,7 @@ PROB = rhist(y,bin_num);
 % DISTRIBUTION OF DATA IN ATLEAST ONE OF THE BINS.
 function trueOrFalse = isZeroDistribution(y,nBins)
 
-[nn x]=rhist(y,nBins);
-clear x;
+nn = RH(y,nBins);
 z = find(nn == 0);
 if length(z)>0
     trueOrFalse = true;  % zero distribution of data
