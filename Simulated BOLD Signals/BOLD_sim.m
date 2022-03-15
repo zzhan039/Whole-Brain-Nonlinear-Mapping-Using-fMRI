@@ -20,3 +20,11 @@ data = dsSimulate(eqns);
 spikes = data.time;
 canonical_hrf = spm_hrf(2); % You need install spm 12 first to get the hrf function.
 BOLD_sim = conv(spikes, canonical_hrf);
+%% Get 100 subjects' BOLD signals
+sub_bold = [];
+
+for i = 1:100
+    snr = 10 % added different portion of white noises
+    sim = awgn(BOLD_sim,10,'measured');
+    sub_bold = [sub_bold sim];
+end
