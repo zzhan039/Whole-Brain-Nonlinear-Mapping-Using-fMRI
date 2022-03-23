@@ -15,8 +15,8 @@ for count0 = 1:num_sbj
     
     Shape = size(data); % The size of the nii image
     x0 = Shape(1);
-    y0 = Shape(2)
-    z0 = Shape(3)
+    y0 = Shape(2);
+    z0 = Shape(3);
 %% Running fale nearset neighbour algorithm.
     for x = 1:x0
     for y = 1:y0
