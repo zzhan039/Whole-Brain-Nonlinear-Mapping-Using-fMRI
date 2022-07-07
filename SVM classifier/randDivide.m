@@ -1,4 +1,4 @@
-function [idxo prtA]=randDivide(total, num_of_folds) % Devide the sample to k folds randomly.
+function [idxo prtA]=randDivide(total, num_of_folds) % Devide the sample to desired(num_of_folds) folds randomly.
 [n,m]=size(total);
 np=(n-rem(n,num_of_folds))/num_of_folds;
 B=total;
