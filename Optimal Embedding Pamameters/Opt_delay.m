@@ -3,7 +3,7 @@ clear;
 load('dir.mat'); % Loading the subject directory, the file contains a column named dir 
 num_sbj = 50; % Replace the number with the number of subjects 
 store = [];
-tau0 = 3 % Replacing the tau0 with the optimal embedding delay
+
 
 for count0 = 1:num_sbj
     
