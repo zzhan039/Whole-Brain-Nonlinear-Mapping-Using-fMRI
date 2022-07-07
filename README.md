@@ -1,6 +1,6 @@
 # Whole-Brain-Nonlinear-Mapping-using-FMRI
 
-Please feel free to send [email](mailto:zzhan039@ucr.edu) for any question related to the method.
+Please feel free to contact me via [email](mailto:zzhan039@ucr.edu) for any question related to the method.
 
 
 ## Overview
