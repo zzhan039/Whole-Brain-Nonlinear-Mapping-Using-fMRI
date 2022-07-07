@@ -4,7 +4,7 @@ train_data = DATA([11:20 21:100],:);
 train_label = LABEL([11:20 21:100]);
 test_data = DATA(1:10,:);
 test_label = LABEL(1:10);
- Model = svmtrain(train_label, train_data, '-c 16 g- 0.001953125 -t 2'); % Replace the parameters with your optimal values
+ Model = svmtrain(train_label, train_data, '-c 16 g- 0.001953125 -t 2'); % Replace the parameters (c and g) with your optimal values
 
 [predict_label_L, accuracy_L, dec_values_L] = svmpredict(test_label, test_data, Model);
 stats = confusionmatStats(test_label,predict_label_L);
