@@ -1,1 +1,1 @@
-After you get the permuatation nii image file, you need to run fsl as (fsl-randomize)[https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Randomise/UserGuide] to get the corrected tfce t-stat map.
+After you get the permuatation nii image file, you need to run fsl as (fsl-randomize)[https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/Randomise/UserGuide] to get the corrected tfce t-stat map. Also, nilearn python package needs to be installed for drawing the whole brain map.[https://github.com/nilearn/nilearn]
