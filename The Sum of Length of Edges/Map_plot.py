@@ -27,14 +27,14 @@ plotting.plot_stat_map(T1,cut_coords=[0, 0, 0],threshold=5000)
 # Ploting the whole brain t-stat map where SE showed signficant difference
 plt.rcParams["font.weight"] = "bold"
 plt.rcParams['font.size'] = '15'
-display = plotting.plot_stat_map(resampled_stat_img, colorbar=False,cmap='YlOrRd',threshold=3,
+display = plotting.plot_stat_map(resampled_stat_img, colorbar=False,cmap='YlOrRd',
                        cut_coords=[0, 0, 0])
-display.title('B-SNIP t-stat map for HC < SZ', size=40,weight='bold')
+display.title('ABIDE I t-stat map for HC < ASD', size=40,weight='bold')
 display.annotate(size=40,weight='bold')
 plotting.show()
 
 # Ploting the whole brain t-stat map where SE showed signficant difference over z axis.
-display1 = plotting.plot_stat_map(resampled_stat_img,  display_mode="z", cut_coords=(np.arange(-50,60,10)),title="UM t-stat map for NC < SZ iterated over z cut off at t > 3 ",colorbar=False,threshold=3,cmap='YlOrRd')
+display1 = plotting.plot_stat_map(resampled_stat_img,  display_mode="z", cut_coords=(np.arange(-50,60,10)),title="ABIDE I t-stat map for HC < ASD iterated over z ",colorbar=False,cmap='YlOrRd')
 display1.title('Axial view by slice number in (A)  ', size=27,weight='bold')
 display1.annotate(size=30,weight='bold')
 plotting.show()
